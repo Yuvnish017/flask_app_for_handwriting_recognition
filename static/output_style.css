@@ -1,0 +1,113 @@
+body{
+	height: 100%;
+	background-image: url('/static/background.png');
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+
+.images{
+	background-color: lightgrey;
+	width:400px;
+	height: 400px;
+}	
+
+.exactCenter{
+	width: 810px;
+	height: 450px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: 50px;
+	margin-left: -405px;
+	color: lightgrey;
+	font-family: Brush Script MT, cursive;
+}
+
+.fs{
+	color: lightgrey;
+}
+
+.header{
+	color: lightgrey;
+	text-align: center;
+	margin-top: 300px;
+	font-family: Brush Script MT, cursive;
+	font-size: 25px;
+}
+
+.readme{
+	color: lightgrey;
+	margin: 530px auto 150px;
+	width: 810px;
+	text-align: justify;
+	font-family: Brush Script MT, cursive;
+}
+
+h2, h1{
+	text-align: center;
+}
+
+#text_align_tm{
+	margin-left: 110px;
+}
+
+#text_align_p li{
+	float: left;
+	margin-left: 65px;
+	margin-right: 70px;
+	font-size: 17px;
+}
+
+#text_align_d li{
+	float: left;
+	margin-left: 145px;
+	margin-right: 70px;
+	font-size: 17px;
+}
+
+a.home_page:link, a.home_page:visited{
+	background-color: lightgrey;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin-right: 180px;
+	margin-left: 30px;
+	border: 2px solid black;
+	border-radius: 6px;
+	transition-duration: 0.4s;
+}
+
+a.home_page:hover, a.home_page:active{
+	background-color: black;
+	color: lightgrey;
+	border: 2px solid lightgrey;
+	box-shadow: 0 12px 16px 0 rgba(211,211,211,0.24), 0 17px 50px 0 rgba(211,211,211,0.19);
+}
+
+.button1{
+	background-color: lightgrey;
+	color: black;
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 20px;
+	border: 2px solid black;
+	border-radius: 6px;
+	transition-duration: 0.4s;
+	font-family: Brush Script MT, cursive;
+	cursor: pointer;
+}
+
+.button1:hover{
+	background-color: black;
+	color: lightgrey;
+	border: 2px solid lightgrey;
+	box-shadow: 0 12px 16px 0 rgba(211,211,211,0.24), 0 17px 50px 0 rgba(211,211,211,0.19);
+}
+
+#flow_chart{
+	width: 800px;
+	height: 600px;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Page</title>
+    <script>
+        var previewImage=function(event){
+            var image = document.getElementById('output');
+            image.src = URL.createObjectURL(event.target.files[0]);
+        };
+    </script>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <script>
+                var messages = {{ messages | safe }};
+                for (var i=0; i<messages.length; i++) {
+                    alert(messages[i]);
+                }
+            </script>
+        {% endif %}
+    {% endwith %}
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='input_style.css') }}" type="text/css">
+</head>
+<body>
+<div class="header">
+    <h1>Handwriting Recognition Project</h1>
+</div>
+<div class="exactCenter">
+<form action="http://127.0.0.1:5001/submitted_image", method="post", enctype="multipart/form-data", name="myForm">
+    <img id="output", width="400px", height="400px", class="images"/>
+    <img width="400px", height="400px", class="images"/><br>
+    <p>
+    <label for="input" style="cursor: pointer; margin-left:130px; margin-right: 280px;" class="custom_file_input">Upload Image</label>
+    <input type="file", name="file", accept="image/gif, image/png, image/jpg, image/jpeg", id="input",
+           onchange="previewImage(event)"/>
+    <input type="submit" value="Submit", class="custom_file_input"/>
+    </p><br>
+</form>
+</div><br>
+<div class="readme">
+    <h1><u>Description of the Project</u></h1>
+    <p>This project is made with a motive to recognize handwritten digits and uppercase english alphabets using
+    Convolutional Neural Network. The neural network was trained using combining MNIST dataset and Char74K dataset
+    with some personal data making the complete dataset of around 400K images(including training set and test set).
+    </p><br><br>
+    <h2><u>The Project was made using</u></h2>
+    <ul id="text_align_p">
+        <li>Python</li>
+        <li>Keras</li>
+        <li>Numpy</li>
+        <li>Sklearn</li>
+    </ul><br><br>
+    <h2><u>Datasets used</u></h2>
+    <ul id="text_align_d">
+        <li>MNIST dataset</li>
+        <li>Char74K</li>
+    </ul><br><br>
+    <h2><u>Architecture used for Training the Neural Network</u></h2>
+    <p>Images of dataset which was fed to the neural network for training where having a shape of 32x128x1(images were
+    Grayscale Images)<br>
+    The architecture used for training the neural network consists of 5 Convolutional Layers with first 2 layers
+    having kernel size of 5x5 with stride of 1 and padding such that layer output has same shape as input to the layer
+    known as Same Convolution and the other 3 convolutional layers has kernel size of 3x3 with stride of 1 and Same
+    Convolution. Each Convolution layer is followed by an Activation Layer with RELU as activation function and a Max
+    Pooling layer with kernel size of 2x2 and stride of 2.<br>
+    The 5th Convolutional Layer is connected to Fully Connected Layers. There are in total 3 Fully Connected layers in
+    the network with first 2 layers have 120 and 84 hidden units respectively with RELU as activation function and the
+    last Fully Connected layer which is last layer of network also has hidden units equal to number of classes in which
+    we want to classify the input images. In this case number of classes is equal to 36. The last Fully Connected
+    layer has Softmax function as its activation function.<br>
+    Below is the FLow Chart of the network:-<br>
+    <img src=" {{ url_for('static', filename='architecture.png' ) }}", id="flow_chart"><br>
+    We achieved a training accuracy of 99.5% and 98% accuracy on test set using this network.</p><br><br>
+    <h2><u>Instructions for Uploading the Image above:-</u></h2>
+    <ul>
+        <li>Before uploading the image make sure the image is cropped to contain only the paper on which you have
+        written.</li>
+        <li>Use only white paper.</li>
+        <li>Try to write with Blue or Black Sketch pen instead of Ball Point pen.</li>
+        <li>Currently the model only recognizes digits and uppercase english alphabets. Lowercase English Alphabets
+        and Special Characters won't be recognized.</li>
+        <li>Once you upload the image you will get preview of the image uploaded in place of left grey image.</li>
+        <li>Once you upload the image don't forget to click the submit button.</li>
+        <li>Once you click on submit button you will the output image in place of right side grey image and you
+        will find the download button also for downloading the output image.</li>
+    </ul><br><br>
+    <h2><u>Team Members</u></h2>
+    <ul id="text_align_tm">
+        <li>Yuvnish Malhotra - B.Tech 3rd Year Electrical Engineering student at IIT Indore</li>
+        <li>Ishika Budhiraja - B.Tech 2nd Year Mechanical Engineering student at IIT Indore</li>
+        <li>Neelanshu - B.Tech 2nd Year Electrical Engineering student at IIT Indore</li>
+        <li>Sreeja - B.Tech 2nd Year Student at IIT Indore</li>
+    </ul><br>
+</div>
+</body>
+</html>
