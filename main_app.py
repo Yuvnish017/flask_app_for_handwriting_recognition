@@ -12,7 +12,7 @@ model = load_model('data_augmentation_model.h5')
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-upload_folder = r'\uploads'
+upload_folder = 'uploads'
 app.config['UPLOAD_FOLDER'] = upload_folder
 
 
