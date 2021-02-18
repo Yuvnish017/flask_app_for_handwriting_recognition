@@ -6,9 +6,6 @@ import imutils
 from imutils.contours import sort_contours
 import numpy
 import os
-from PIL import Image
-import io
-import base64
 
 model = load_model('data_augmentation_model.h5')
 
@@ -95,4 +92,4 @@ def download_file(file_path):
 
 
 if __name__ == '__main__':
-    app.run(port=5001, debug=True)
+    app.run(host='0.0.0.0')
