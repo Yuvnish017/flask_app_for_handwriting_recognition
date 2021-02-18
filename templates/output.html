@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8", name="viewport", content="width=device-width, initial-scale=1">
-    <title>Handwriting Recognition Project</title>
+    <meta charset="UTF-8">
+    <title>Display</title>
     <link rel="stylesheet", href="{{ url_for('static', filename='output_style.css') }}", type="text/css">
 </head>
 <body>
@@ -34,7 +34,10 @@
     <h2><u>Datasets used</u></h2>
     <ul id="text_align_d">
         <li>MNIST dataset</li>
-        <li>Char74K</li>
+        <li>Subset of NIST dataset for uppercase alphabets(A-Z) combined with images from some other sources.
+            The dataset can be found on Kaggle through
+            <a href="https://www.kaggle.com/sachinpatel21/az-handwritten-alphabets-in-csv-format", id="dataset_link">this link</a>.
+        </li>
     </ul><br><br>
     <h2><u>Architecture used for Training the Neural Network</u></h2>
     <p>Images of dataset which was fed to the neural network for training where having a shape of 32x128x1(images were

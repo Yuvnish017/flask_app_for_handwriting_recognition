@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8", name="viewport", content="width=device-width, initial-scale=1">
-    <title>Handwriting Recognition Project</title>
+    <meta charset="UTF-8", name="viewport", content="width=device-width, initial_scale=1.0">
+    <title>Web Page</title>
     <script>
         var previewImage=function(event){
             var image = document.getElementById('output');
@@ -27,11 +27,12 @@
     <h1>Handwriting Recognition Project</h1>
 </div>
 <div class="exactCenter">
-<form action="/submitted_image", method="post", enctype="multipart/form-data", name="myForm">
+<form action="http://127.0.0.1:5001/submitted_image", method="post", enctype="multipart/form-data", name="myForm">
     <img id="output", width="400px", height="400px", class="images"/>
     <img width="400px", height="400px", class="images"/><br>
     <p>
-    <label for="input" style="cursor: pointer; margin-left:130px; margin-right: 280px;" class="custom_file_input">Upload Image</label>
+    <label for="input" style="cursor: pointer; margin-left:130px; margin-right: 280px;" class="custom_file_input">
+        Upload Image</label>
     <input type="file", name="file", accept="image/gif, image/png, image/jpg, image/jpeg", id="input",
            onchange="previewImage(event)"/>
     <input type="submit" value="Submit", class="custom_file_input"/>
@@ -54,8 +55,11 @@
     <h2><u>Datasets used</u></h2>
     <ul id="text_align_d">
         <li>MNIST dataset</li>
-        <li>Char74K</li>
-    </ul><br><br>
+        <li>Subset of NIST dataset for uppercase alphabets(A-Z) combined with images from some other sources.
+            The dataset can be found on Kaggle through
+            <a href="https://www.kaggle.com/sachinpatel21/az-handwritten-alphabets-in-csv-format", id="dataset_link">this link</a>.
+        </li>
+    </ul><br><br><br><br><br>
     <h2><u>Architecture used for Training the Neural Network</u></h2>
     <p>Images of dataset which was fed to the neural network for training where having a shape of 32x128x1(images were
     Grayscale Images)<br>

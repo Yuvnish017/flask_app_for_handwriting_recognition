@@ -6,13 +6,16 @@ import imutils
 from imutils.contours import sort_contours
 import numpy
 import os
+from PIL import Image
+import io
+import base64
 
 model = load_model('data_augmentation_model.h5')
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
-upload_folder = 'uploads'
+upload_folder = r'C:\Users\yuvim\OneDrive\Desktop\Flask_development\uploads'
 app.config['UPLOAD_FOLDER'] = upload_folder
 
 
@@ -92,4 +95,4 @@ def download_file(file_path):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(port=5001, debug=True)

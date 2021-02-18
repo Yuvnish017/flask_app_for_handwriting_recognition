@@ -8,19 +8,16 @@ body{
 }
 
 .images{
+	max-width: 400px;
 	background-color: lightgrey;
-	width:400px;
+	width:60%;
 	height: 400px;
 }	
 
 .exactCenter{
-	width: 810px;
-	height: 450px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: 50px;
-	margin-left: -405px;
+	max-width: 810px;
+	width: 70%;
+	margin: 30px auto 30px;
 	color: lightgrey;
 	font-family: Brush Script MT, cursive;
 }
@@ -30,17 +27,20 @@ body{
 }
 
 .header{
+	max-width: 600px;
+	width: 70%;
 	color: lightgrey;
 	text-align: center;
-	margin-top: 300px;
+	margin: 380px auto 30px;
 	font-family: Brush Script MT, cursive;
 	font-size: 25px;
 }
 
 .readme{
+	max-width: 810px;
 	color: lightgrey;
-	margin: 530px auto 150px;
-	width: 810px;
+	margin: 1px auto 200px;
+	width: 70%;
 	text-align: justify;
 	font-family: Brush Script MT, cursive;
 }
@@ -62,7 +62,7 @@ h2, h1{
 
 #text_align_d li{
 	float: left;
-	margin-left: 145px;
+	margin-left: 65px;
 	margin-right: 70px;
 	font-size: 17px;
 }
@@ -110,4 +110,12 @@ a.home_page:hover, a.home_page:active{
 #flow_chart{
 	width: 800px;
 	height: 600px;
+}
+
+#dataset_link{
+	color: lightgrey;
+}
+
+#dataset_link:hover{
+	color: black;
 }
