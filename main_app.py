@@ -7,7 +7,7 @@ from imutils.contours import sort_contours
 import numpy
 import os
 
-model = load_model('data_augmentation_model.h5')
+model = load_model('data_augmentation_model_v3.h5')
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
