@@ -44,8 +44,8 @@
 <div class="readme">
     <h1><u>Description of the Project</u></h1>
     <p id="description">This project is made with a motive to recognize handwritten digits and uppercase english alphabets using
-    Convolutional Neural Network. The neural network was trained using combining MNIST dataset and Char74K dataset
-    with some personal data making the complete dataset of around 400K images(including training set and test set).
+    Convolutional Neural Network. The neural network was trained using combining MNIST dataset(digits 0-9) and subset of NIST dataset combined with images some other sources
+    for alphabets A-Z with some personal data making the complete dataset of around 400K images(including training set and test set).
     </p><br><br>
     <h2><u>The Project was made using</u></h2>
     <ul id="text_align_p">
@@ -63,7 +63,7 @@
         </li>
     </ul><br><br>
     <h2><u>Architecture used for Training the Neural Network</u></h2>
-    <p id="para">Images of dataset which was fed to the neural network for training where having a shape of 32x128x1(images were
+    <p id="para">Images of dataset which was fed to the neural network for training where having a shape of 32x64x1(images were
     Grayscale Images)<br>
     The architecture used for training the neural network consists of 5 Convolutional Layers with first 2 layers
     having kernel size of 5x5 with stride of 1 and padding such that layer output has same shape as input to the layer
