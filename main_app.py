@@ -47,7 +47,7 @@ def prediction(filename):
             dy = int(max(0, 32 - th) / 2.0)
             padded = cv.copyMakeBorder(thresh, top=dy, bottom=dy, left=dx, right=dx, borderType=cv.BORDER_CONSTANT,
                                        value=(0, 0, 0))
-            padded = cv.resize(padded, (32, 128))
+            padded = cv.resize(padded, (32, 64))
             padded = numpy.array(padded)
             padded = numpy.expand_dims(padded, axis=0)
             pred = model.predict(padded) * 100
