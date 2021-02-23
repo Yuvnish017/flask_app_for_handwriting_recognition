@@ -65,6 +65,8 @@ h2, h1{
 	float: left;
 	margin-left: 65px;
 	margin-right: 70px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	font-size: 17px;
 }
 
@@ -79,6 +81,9 @@ h2, h1{
 	transition-duration: 0.4s;
 	font-family: Brush Script MT, cursive;
 	cursor: pointer;
+	font-size: 15px;
+	margin-left:130px;
+	margin-right: 150px;
 }
 
 .custom_file_input:hover{
