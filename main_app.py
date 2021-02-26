@@ -61,11 +61,7 @@ def prediction(filename):
 
 
 @app.route('/submitted_image', methods=['POST', 'GET'])
-def submitted_image():
-    files = os.listdir(upload_folder)
-    for file in files:
-        os.remove(file)
-        
+def submitted_image():        
     if request.method == 'POST':
         f = request.files['file']
         if f.filename == '':
